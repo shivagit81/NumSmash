@@ -1,0 +1,116 @@
+:root { 
+    --primary-text-color: #27374d; 
+} 
+
+* { 
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0; 
+    font-family: "Montserrat", sans-serif; 
+    font-family: "Ubuntu", sans-serif; 
+} 
+
+body { 
+    background-color: #dda15e; 
+    color: var(--primary-text-color); 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent scrolling */
+} 
+
+header {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced margin */
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+header h1 {
+    font-size: 2rem; /* Reduced font size */
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.2rem; /* Reduced font size */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container { 
+    width: 90vw; /* Adjusted width to fit viewport */
+    max-width: 400px; /* Set maximum width */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+    margin-top: 10px; /* Reduced margin */
+} 
+
+.score { 
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+    font-size: 1.5rem; /* Reduced font size */
+    padding: 5px; /* Reduced padding */
+} 
+
+.score-title, .score-value { 
+    width: 50%; 
+} 
+
+.result { 
+    font-size: 1.5rem; /* Reduced font size */
+    text-align: center; 
+    padding: 5px; /* Reduced padding */
+} 
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    width: 100vw; /* Full viewport width */
+    height: 100vw; /* Full viewport height to maintain square aspect ratio */
+    max-width: 400px; /* Constrain maximum size */
+    max-height: 400px; /* Constrain maximum size */
+    background-color: rgb(209, 207, 207); 
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5); /* Reduced shadow */
+    margin-top: 10px; /* Reduced margin */
+} 
+
+.grid-item { 
+    border: 1px solid var(--primary-text-color); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1.5rem; /* Reduced font size */
+} 
+
+.rules { 
+    border: 2px solid white; 
+    padding: 10px; /* Reduced padding */
+} 
+
+.rules>h1 { 
+    width: 100%; 
+    font-size: 1.5rem; /* Reduced font size */
+    text-align: center; 
+    padding: 5px; /* Reduced padding */
+} 
+
+.rules-para { 
+    padding: 10px; /* Reduced padding */
+}
